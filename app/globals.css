@@ -1062,3 +1062,13 @@ top:40px;
 align-self:start;
 
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+}

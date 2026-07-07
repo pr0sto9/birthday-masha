@@ -1,5 +1,18 @@
+.collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* планшет */
 @media (max-width: 768px) {
-  .grid {
+  .collage {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* телефон */
+@media (max-width: 500px) {
+  .collage {
+    grid-template-columns: 1fr;
   }
 }

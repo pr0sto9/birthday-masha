@@ -85,9 +85,19 @@
     font-size: 16px;
   }
 
+.content {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
   .content {
-    gap: 25px;
+    flex-direction: column;
+    align-items: center;
   }
+}
 
   .image {
     height: 420px;
