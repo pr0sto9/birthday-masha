@@ -1,61 +1,96 @@
 .hero {
-    min-height: 100vh;
-    padding: 70px 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
-    width: min(1400px,92%);
-    margin: auto;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 40px 24px;
 }
 
 .title {
-
-    text-align:center;
-
-    font-size:72px;
-
-    color:#dd8fa9;
-
-    line-height:1.15;
-
-    font-family:var(--font-title);
-
+  font-size: 64px;
+  line-height: 1.1;
+  text-align: center;
 }
 
-.subtitle{
-
-    text-align:center;
-
-    margin-top:18px;
-
-    margin-bottom:70px;
-
-    color:#8f7d84;
-
-    line-height:1.8;
-
-    font-size:20px;
-
+.subtitle {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.content{
-
-    display:grid;
-
-    grid-template-columns:520px 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
+.content {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  align-items: flex-start;
 }
 
-@media(max-width:1100px){
 
-.content{
+/* Картинка */
+.image {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  border-radius: 36px;
+  background: white;
+  padding: 10px;
 
-grid-template-columns:1fr;
+  box-shadow:
+    0 35px 80px rgba(214,174,189,.25);
 
+  transition: .45s;
 }
 
+.cover {
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+
+/* Планшет */
+@media (max-width: 900px) {
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .image {
+    height: 550px;
+  }
+}
+
+
+/* Телефон */
+@media (max-width: 500px) {
+
+  .container {
+    padding: 25px 15px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .content {
+    gap: 25px;
+  }
+
+  .image {
+    height: 420px;
+    border-radius: 24px;
+  }
 }
