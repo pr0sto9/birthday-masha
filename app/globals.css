@@ -842,13 +842,20 @@ top:0;
 }
 
 .letter-paper{
+
+  position: relative;
+  z-index: 10;
+
   height:auto;
-  min-height:500px;
+  min-height:600px;
+
   overflow:visible;
 
-  width:100%;
+  margin-top:40px;
+
   padding:25px;
-  margin-top:30px;
+
+  background:#fffdf9;
 }
 
 .letter-paper p{
@@ -1140,6 +1147,29 @@ align-self:start;
 
   .letter-content {
     width: 100%;
+  }
+
+}
+
+.letter-paper {
+  position: relative;
+  z-index: 5;
+}
+
+@media(max-width:650px){
+
+  .gallery {
+    position: relative;
+    z-index: 1;
+  }
+
+  .letter-paper {
+    position: relative;
+    z-index: 10;
+
+    margin-top: 30px;
+
+    background: #fffdf9;
   }
 
 }
